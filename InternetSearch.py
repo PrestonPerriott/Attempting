@@ -15,7 +15,7 @@ response = requests.get(Goolge)
 response2 = requests.get(Craigs)
 
 GoogleHtml = response.content
-CraigsHtml = response.content #dont really have a need for the raw html tho
+CraigsHtml = response2.content #dont really have a need for the raw html tho
 
 BaseQuery = input("What exactly are you searching for ?")
 
@@ -23,7 +23,7 @@ NewBaseQuery = TextBlob(BaseQuery)#Have to make query a blob before we correct i
 #BaseQuery.noun_phrases
 print(NewBaseQuery.correct()) #attempts to correct any spelling errors
 NewBaseQuery = NewBaseQuery.correct()
-print("so youre looking for " + BaseQuery)
+print("so you're looking for " + BaseQuery)
 
 
 print(NewBaseQuery.words)
